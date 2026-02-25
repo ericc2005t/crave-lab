@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CRAVE LAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">CRAVE LAB</div>
+  <nav>
+    <a href="#products">Products</a>
+    <a href="#drop">Next Drop</a>
+    <button class="cart-btn" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>SMALL BATCH. BIG CRAVE.</h1>
+  <p>Artisan baked goods · Limited weekly drops · Sabadell</p>
+  <button class="primary">JOIN WAITLIST</button>
+</section>
+
+<section id="products" class="products">
+  <h2>OUR PRODUCTS</h2>
+
+  <div class="product-grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" />
+      <h3>Triple Chocolate</h3>
+      <p>6.50€</p>
+      <button onclick="addToCart('Triple Chocolate', 6.5)">Add to Cart</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec" />
+      <h3>Classic Glaze Roll</h3>
+      <p>5.50€</p>
+      <button onclick="addToCart('Classic Glaze Roll', 5.5)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<section id="drop" class="drop">
+  <h2>NEXT DROP</h2>
+  <div id="countdown"></div>
+</section>
+
+<div id="cart" class="cart">
+  <h3>Your Cart</h3>
+  <ul id="cart-items"></ul>
+  <p>Total: <span id="cart-total">0</span>€</p>
+</div>
+
+<footer>
+  <p>CRAVE LAB — Sabadell, Spain</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
