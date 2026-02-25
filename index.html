@@ -5,6 +5,7 @@
   <title>CRAVE LAB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,42 +18,64 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>SMALL BATCH. BIG CRAVE.</h1>
-  <p>Artisan baked goods · Limited weekly drops · Sabadell</p>
-  <button class="primary">JOIN WAITLIST</button>
+  <div class="hero-overlay">
+    <h1>SMALL BATCH. BIG CRAVE.</h1>
+    <p>Artisan baked goods · Limited weekly drops · Sabadell</p>
+    <button class="primary">JOIN WAITLIST</button>
+  </div>
 </section>
 
-<section id="products" class="products">
-  <h2>OUR PRODUCTS</h2>
-
-  <div class="product-grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" />
-      <h3>Triple Chocolate</h3>
-      <p>6.50€</p>
-      <button onclick="addToCart('Triple Chocolate', 6.5)">Add to Cart</button>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec" />
-      <h3>Classic Glaze Roll</h3>
-      <p>5.50€</p>
-      <button onclick="addToCart('Classic Glaze Roll', 5.5)">Add to Cart</button>
+<!-- FEATURE SECTION -->
+<section class="feature">
+  <div class="feature-grid">
+    <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec" alt="">
+    <div>
+      <h2>THE CRAVE IS LIMITED</h2>
+      <p>We bake in small batches.  
+      We release in numbered drops.  
+      When it's gone, it's gone.</p>
+      <button class="outline">VIEW DROP 01</button>
     </div>
   </div>
 </section>
 
+<!-- PRODUCTS -->
+<section id="products" class="products">
+  <h2>BEST SELLERS</h2>
+  <div class="product-grid">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
+      <h3>Triple Chocolate</h3>
+      <p>€4.20</p>
+      <button onclick="addToCart('Triple Chocolate', 4.2)">ADD TO DROP</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec">
+      <h3>Classic Glaze</h3>
+      <p>€5.00</p>
+      <button onclick="addToCart('Classic Glaze', 5)">ADD TO DROP</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e">
+      <h3>Lotus Edition</h3>
+      <p>€4.20</p>
+      <button onclick="addToCart('Lotus Edition', 4.2)">ADD TO DROP</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- DROP SECTION -->
 <section id="drop" class="drop">
   <h2>NEXT DROP</h2>
   <div id="countdown"></div>
+  <button class="light">JOIN WAITLIST</button>
 </section>
-
-<div id="cart" class="cart">
-  <h3>Your Cart</h3>
-  <ul id="cart-items"></ul>
-  <p>Total: <span id="cart-total">0</span>€</p>
-</div>
 
 <footer>
   <p>CRAVE LAB — Sabadell, Spain</p>
